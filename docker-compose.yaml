@@ -1,0 +1,16 @@
+################################################################################
+# Run example
+# $ docker-compose run --rm --service-ports nginx
+################################################################################
+---
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:stable
+    ports:
+      - 80:80
+    volumes:
+      - type: bind
+        source: ${PWD}/app/
+        target: /usr/share/nginx/html/
