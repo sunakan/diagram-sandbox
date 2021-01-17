@@ -14,5 +14,9 @@ include makefiles/help.mk
 # タスク
 ################################################################################
 .PHONY: up
-up: ## nginx
+up:
 	docker-compose up
+
+.PHONY: down
+down:
+	docker-compose down
